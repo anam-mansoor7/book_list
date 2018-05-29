@@ -1,0 +1,23 @@
+<div id="books">
+  <h1> Top Ten Books</h1>
+
+  <table>
+    <tbody>
+    <tr>
+      <th> Position</th>
+      <th> Title</th>
+      <th> Author</th>
+      <th> Weeks on List</th>
+    </tr>
+
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.rank %></td>
+        <td><%= book.title.humanize %></td>
+        <td><%= book.author %></td>
+        <td><%= book.weeks_on_list %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
