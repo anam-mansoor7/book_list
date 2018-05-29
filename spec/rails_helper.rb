@@ -12,6 +12,7 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   WebMock.disable_net_connect!(allow_localhost: true)
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each {|file| require file }
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
